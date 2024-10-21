@@ -19,4 +19,8 @@ DB = "nem2p"
 
 @app.get("/")  # zone apex
 def zone_apex():
-    return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static"}
+    return {"Hello": "This is FastAPI!"}
+
+@app.get("/square/{a}")
+def square(a: int):
+    return {"square": a * a}
