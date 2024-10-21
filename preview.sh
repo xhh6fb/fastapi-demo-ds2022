@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd app
-/home/gitpod/.pyenv/shims/uvicorn main:app --reload --log-level debug
+source env/bin/activate
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
